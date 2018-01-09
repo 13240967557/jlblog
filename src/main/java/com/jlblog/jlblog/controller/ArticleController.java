@@ -40,5 +40,8 @@ public class ArticleController {
 		map.put("msg", articleList);
 		return map;
 	}
+	public void test(){
+		
+	}
 	
 }
