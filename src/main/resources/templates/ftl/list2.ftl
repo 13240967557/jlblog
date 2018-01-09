@@ -6,7 +6,7 @@
 <meta name="keywords" content="你我网,圈圈说,汉中,汉中圈圈,你我,如是观,心理,感情,youmew" />
 <meta name="description"
 	content="你我网，缘自圈圈说，记载着圈圈的生活过往，只为留住那份曾经的感动；圈圈，又名小尤，前半生执著于感情，命途多舛，故孑然一身。" />
-<title>光与影的艺术</title>
+<title>感悟生活点滴</title>
 <link rel="stylesheet" rev="stylesheet" href="./style/style.css"
 	type="text/css" media="screen" />
 <link rel="shortcut icon" href="/favicon.ico" />
@@ -18,7 +18,7 @@
 	
 	$(function(){
 		
-		alert("初始化方法进入二"); 
+		trace("初始化方法进入二"); 
 	});
 	
 	
