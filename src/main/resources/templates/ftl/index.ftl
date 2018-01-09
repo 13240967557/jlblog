@@ -27,7 +27,7 @@
 					<div class="post multi-post cate4 auth1">
 						<h4 class="post-date">2016年3月17日</h4>
 						<h2 class="post-title">
-							<a href="/blog" target="_blank">明心见性的一段对话</a>
+							<a href="./blog" target="_blank">明心见性的一段对话</a>
 						</h2>
 						<div class="post-body">
 							<p>以下是我和妹子聊到房屋拆迁话题时的对话，希望我们能一直保持平常心，认真做自己……</p>
