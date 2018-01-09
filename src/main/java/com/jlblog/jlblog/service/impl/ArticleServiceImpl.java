@@ -27,6 +27,7 @@ public class ArticleServiceImpl implements ArticleService{
 	public List<Article> getActicleByClassify(String id) {
 		
 		List<Article> articleList = articleMapper.getArticleByClassify(id);
+		
 		return articleList;
 	}
 
