@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jlblog.jlblog.dao.ArticleMapper">
+    
+    <select id="getArticleByClassify" parameterType="string" resultType="com.jlblog.jlblog.pojo.Article">
+    	SELECT * FROM article WHERE classify = #{id}
+    </select>
+
+</mapper>
