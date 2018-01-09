@@ -21,6 +21,7 @@ public class ArticleController {
 	
 	/**
 	 * 根据分类id查询文章
+	 * 
 	 * @param id
 	 * @return
 	 * 
