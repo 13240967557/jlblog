@@ -32,6 +32,7 @@ public class ArticleController {
 		int b = 123;
 		int e = 456;
 		int aa=121231;
+		String s = "hsdhf";
 		Map map = new HashMap();
 		if (id==null || id.equals("")) {
 			map.put("error", 0);
