@@ -31,6 +31,7 @@ public class ArticleController {
 	public Map getActicleByClassify(String id){
 		int b = 123;
 		int e = 456;
+		int aa=121231;
 		Map map = new HashMap();
 		if (id==null || id.equals("")) {
 			map.put("error", 0);
