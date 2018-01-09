@@ -29,8 +29,7 @@ public class ArticleController {
 	@RequestMapping("/getActicleByClassify")
 	@ResponseBody
 	public Map getActicleByClassify(String id){
-		int a=123;
-		
+		int aa=121231;
 		Map map = new HashMap();
 		if (id==null || id.equals("")) {
 			map.put("error", 0);
