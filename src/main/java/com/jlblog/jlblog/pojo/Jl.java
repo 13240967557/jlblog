@@ -7,6 +7,9 @@ public class Jl {
 	
 	private String name;
 
+	private int a;
+	
+	
 	public String getName() {
 		return name;
 	}
