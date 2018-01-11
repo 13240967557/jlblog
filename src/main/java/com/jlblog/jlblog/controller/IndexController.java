@@ -15,7 +15,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class IndexController {
 	
-	
+	@RequestMapping("/")
+	public String ind(){
+		return "ftl/index";
+	}
 	
 	@RequestMapping("/{str}")
 	public String index(@PathVariable String str){
