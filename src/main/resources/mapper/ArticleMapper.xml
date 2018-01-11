@@ -4,8 +4,35 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jlblog.jlblog.dao.ArticleMapper">
     
-    <select id="getArticleByClassify" parameterType="string" resultType="com.jlblog.jlblog.pojo.Article">
-    	SELECT * FROM article WHERE classify = #{id}
+    <resultMap type="com.jlblog.jlblog.pojo.ArticleVo" id="aritcleVo">
+    	<result property="id" column="id"/>
+    	<result property="title" column="title"/>
+    	<result property="intro" column="intro"/>
+    	<result property="createtime" column="createtime"/>
+    	<result property="browsenumber" column="browsenumber"/>
+    	<result property="commentnumber" column="icommentnumberd"/>
+    	<result property="articleimg" column="articleimg"/>
+    	<result property="classify" column="classify"/>
+    	<result property="articleDetails" column="details"/>    	
+    </resultMap>
+    
+    <select id="getArticleByClassify" parameterType="string" resultMap="aritcleVo">
+    	SELECT * FROM article WHERE classify = #{classify}
     </select>
 
+	<!-- 查询文章内容 -->
+    <select id="getArticleById" parameterType="string" resultMap="aritcleVo">
+    	SELECT a.*,ad.details
+		FROM article a,articledetails ad
+		WHERE ad.aid = a.id
+		AND a.id = #{id}
+    </select>
+    
+    <!-- 根据文章id查询标签 -->
+    <select id="getLaberByAid" parameterType="string" resultType="com.jlblog.jlblog.pojo.Laber">
+    	SELECT l.* FROM laber l,laberarticle la
+		WHERE la.aid=#{id}
+		AND la.lid = l.id
+    </select>
+    
 </mapper>

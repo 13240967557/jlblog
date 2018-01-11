@@ -4,7 +4,8 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
-import com.jlblog.jlblog.pojo.Article;
+import com.jlblog.jlblog.pojo.ArticleVo;
+import com.jlblog.jlblog.pojo.Laber;
 
 /**
  * 文章mapper
@@ -14,6 +15,10 @@ import com.jlblog.jlblog.pojo.Article;
 @Mapper
 public interface ArticleMapper {
 
-	List<Article> getArticleByClassify(String id);
+	List<ArticleVo> getArticleByClassify(String classify);
+
+	List<ArticleVo> getArticleById(String id);
+
+	List<Laber> getLaberByAid(String id);
 	
 }

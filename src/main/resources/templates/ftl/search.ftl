@@ -1,3 +1,4 @@
+<#assign base=request.contextPath />
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
 <head>
@@ -7,12 +8,12 @@
 <meta name="description"
 	content="你我网，缘自圈圈说，记载着圈圈的生活过往，只为留住那份曾经的感动；圈圈，又名小尤，前半生执著于感情，命途多舛，故孑然一身。" />
 <title>Search:觉悟 - 瑬蒗d魚</title>
-<link rel="stylesheet" rev="stylesheet" href="./style/style.css"
+<link rel="stylesheet" rev="stylesheet" href="${base}/style/style.css"
 	type="text/css" media="screen" />
 <link rel="shortcut icon" href="/favicon.ico" />
-<script src="./style/common.js" type="text/javascript"></script>
-<script src="./style/c_html_js_add.js" type="text/javascript"></script>
-<script src="./style/custom.js" type="text/javascript"></script>
+<script src="${base}/style/common.js" type="text/javascript"></script>
+<script src="${base}/style/c_html_js_add.js" type="text/javascript"></script>
+<script src="${base}/style/custom.js" type="text/javascript"></script>
 </head>
 <body class="single">
 	<div id="divAll">

@@ -1,3 +1,4 @@
+<#assign base=request.contextPath />
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
 <head>
@@ -7,69 +8,84 @@
 <meta name="description"
 	content="你我网，缘自圈圈说，记载着圈圈的生活过往，只为留住那份曾经的感动；圈圈，又名小尤，前半生执著于感情，命途多舛，故孑然一身。" />
 <title>2018年就一个字：虎！​ - 瑬蒗d魚</title>
-<link rel="stylesheet" rev="stylesheet" href="./style/style.css"
+<link rel="stylesheet" rev="stylesheet" href="${base}/style/style.css"
 	type="text/css" media="screen" />
 <link rel="shortcut icon" href="/favicon.ico" />
-<script src="./style/common.js" type="text/javascript"></script>
-<script src="./style/c_html_js_add.js" type="text/javascript"></script>
-<script src="./style/custom.js" type="text/javascript"></script>
+<script src="${base}/style/common.js" type="text/javascript"></script>
+<script src="${base}/style/c_html_js_add.js" type="text/javascript"></script>
+<script src="${base}/style/custom.js" type="text/javascript"></script>
+<script src="${base}/js/jquery-3.1.1.js"></script>
+<script type="text/javascript">
+
+	$(function(){
+		
+		var id = $("#id").val();
+		
+		$.ajax({
+			url:"/article/getArticleById",
+			type:"Post",
+			data:"id="+id,
+			
+			success:function(msg){
+				var data = eval(msg);
+				if(data.error!=200){
+					alert(data.msg)
+					return
+				}
+				article = data.msg;
+				var content = "";
+				
+				content+="<div class='post-nav'>";
+				content+="<a class='l' href='#post/74.html' title='初冬，景如故'>« 上一篇</a>";
+				content+="<a class='r' href='#post/76.html' title='人生何尝不是一场赌局'>下一篇 »</a>";
+				content+="</div>";
+				content+="<h4 class='post-date'>"+article.createtime+"</h4>";
+				content+="<h2 class='post-title'>"+article.title+"​</h2>";
+				content+="<div class='post-body'>";
+				content+=article.articleDetails;
+				content+="<p style='text-indent: 0em;'>";
+				content+="<img src='#zb_users/upload/2016/2/2016021074509417.jpg' title='你我网' alt='你我网' />";
+				content+="</p>";
+				content+="</div>";
+				content+="<h5 class='post-tags'>";
+				content+="Tags: <span class='tags'>";
+				var laList = article.laList;
+				for(var i = 0;i<laList.length;i++){
+					content+="<a href='#catalog.asp?tags=%E6%91%84%E5%BD%B1'>"+laList[i].name+"</a>&nbsp;&nbsp;";	
+				}
+				content+="</span>";
+				content+="</h5>";
+				content+="<h6 class='post-footer'>";
+				content+="分类:大生活 | 评论:5 | 浏览:<span id='spn75'></span>";
+				content+="<br />";
+				content+="<br />";
+				content+="<div style='width: 660px;' align='center'></div>";
+				content+="</h6>";
+				content+="</div>";
+				
+				$("#article").append(content);
+			}
+		});
+		
+	});
+</script>
 </head>
 <body class="single">
-
-
-
 	<div id="divAll">
 		<div id="divPage">
 			<div id="divMiddle">
 
 				<#include "model/head.ftl"/>
-
+				
+				<input type="hidden" id="id" value="${RequestParameters['id']}"/>
 				<div id="divMain">
-					<div class="post single-post cate2 auth1">
-						<div class="post-nav">
-							<a class="l" href="#post/74.html" title="初冬，景如故">« 上一篇</a><a
-								class="r" href="#post/76.html" title="人生何尝不是一场赌局">下一篇 »</a>
-						</div>
-						<h4 class="post-date">2016-1-26 13:52:59</h4>
-						<h2 class="post-title">2016年就一个字：戒！​</h2>
-						<div class="post-body">
-							<p>太阳晒的人懒洋洋的，这段时间的汉中也和其它地方一样，迎来了冬季最冷的天气，零下7度左右，家里的水管都冻爆了。</p>
-							<p>很快过春节了，我们公司也和本地其它小公司一样，员工都在等待着放假和年终奖，完全不在工和状态。其实大家都没盼望着过年，这意味着在没有明确的计划之前，过完年又得重复这种百无聊赖的工作和生活，每个人都憋足了劲，又不知向何处使。</p>
-							<p>
-								这个时候很多人都在写工作总结，什么A总结，B计划之类的，其实真没什么意义，我就不写了。这一年对我个人而言还算不错，变化挺大，也有惊喜，2016年就一个字：<strong>戒！</strong>
-							</p>
-							<p style="text-indent: 0em;">
-								<img src="#zb_users/upload/2016/2/2016021074509417.jpg"
-									title="你我网" alt="你我网" />
-							</p>
-							<p>这条路小时候走了无数次，将来还会更多……</p>
-							<p>
-								<br />
-							</p>
-							<p>
-								<br />
-							</p>
-						</div>
-						<h5 class="post-tags">
-							Tags: <span class="tags"><a
-								href="#catalog.asp?tags=%E6%91%84%E5%BD%B1">摄影</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E7%94%9F%E6%B4%BB">生活</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E5%BF%83%E6%83%85">心情</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E4%BA%BA%E7%94%9F">人生</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E8%A7%89%E6%82%9F">觉悟</a>&nbsp;&nbsp;</span>
-						</h5>
-						<h6 class="post-footer">
-							发布:圈圈 | 分类:大生活 | 评论:5 | 浏览:<span id="spn75"></span>
-							<script type="text/javascript">
-								AddViewCount(75)
-							</script>
-							<br />
-							<!-- AD BEGIN -->
-							<br />
-							<div style="width: 660px;" align="center"></div>
-							<!-- AD END -->
-						</h6>
+				
+					<div class="post single-post cate2 auth1" id="article">
+						
+						<!-- 数据填充位置 -->
+						
 					</div>
+					
 					<ul class="msg mutuality">
 						<li class="tbname">相关文章:</li>
 						<li class="msgarticle"><p>
