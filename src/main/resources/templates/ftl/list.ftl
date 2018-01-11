@@ -19,7 +19,7 @@
 	
 	$(function(){
 		$.ajax({
-			url:"/article/getActicleByClassify",
+			url:"article/getActicleByClassify",
 			type:"Post",
 			data:"classify=1",
 			
