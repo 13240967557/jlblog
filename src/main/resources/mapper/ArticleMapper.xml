@@ -35,4 +35,11 @@
 		AND la.lid = l.id
     </select>
     
+    <select id="getCorrelationArticle" parameterType="string" resultType="com.jlblog.jlblog.pojo.ArticleVo">
+    	SELECT id,title,createtime
+		FROM article
+		WHERE classify = #{classify}
+		LIMIT 0,10
+    </select>
+    
 </mapper>

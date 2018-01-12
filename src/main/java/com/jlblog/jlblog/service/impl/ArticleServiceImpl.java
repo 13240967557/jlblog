@@ -33,8 +33,9 @@ public class ArticleServiceImpl implements ArticleService{
 			
 			return null;
 		}else {
-			//查询标签
+			
 			for (ArticleVo article : articleList) {
+				//查询标签
 				List<Laber> laList = articleMapper.getLaberByAid(article.getId());
 				article.setLaList(laList);
 			}
@@ -54,11 +55,14 @@ public class ArticleServiceImpl implements ArticleService{
 			
 			return null;
 		}else {
-			//查询标签
-			for (ArticleVo articleVo : list) {
-				List<Laber> laList = articleMapper.getLaberByAid(articleVo.getId());
-				articleVo.setLaList(laList);
-			}
+			ArticleVo articleVo = list.get(0);
+			//查询标签			
+			List<Laber> laList = articleMapper.getLaberByAid(articleVo.getId());
+			articleVo.setLaList(laList);
+			
+			//查询相关文章
+			List<ArticleVo> coList = articleMapper.getCorrelationArticle(articleVo.getClassify());
+			articleVo.setCoList(coList);
 		}
 		return list;
 	}

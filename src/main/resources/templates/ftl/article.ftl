@@ -34,7 +34,9 @@
 				}
 				article = data.msg;
 				var content = "";
+				var correlation = "";
 				
+				/* 文章主体 */
 				content+="<div class='post-nav'>";
 				content+="<a class='l' href='#post/74.html' title='初冬，景如故'>« 上一篇</a>";
 				content+="<a class='r' href='#post/76.html' title='人生何尝不是一场赌局'>下一篇 »</a>";
@@ -63,7 +65,19 @@
 				content+="</h6>";
 				content+="</div>";
 				
+				/* 相关文章 */
+				correlation+="<li class='tbname'>相关文章:</li>";
+				correlation+="<li class='msgarticle'>";
+				var coList = article.coList;
+				for(var i = 0;i<coList.length;i++){
+					correlation+="<p>";
+					correlation+="<a href='article.ftl?id="+coList[i].id+"'>"+coList[i].title+"</a>&nbsp;&nbsp;"+coList[i].createtime;
+					correlation+="</p>";	
+				}
+				correlation+="</li>";
+
 				$("#article").append(content);
+				$("#correlation").append(correlation);
 			}
 		});
 		
@@ -82,53 +96,17 @@
 				
 					<div class="post single-post cate2 auth1" id="article">
 						
-						<!-- 数据填充位置 -->
+						<!-- 文章数据填充位置 -->
 						
 					</div>
 					
-					<ul class="msg mutuality">
-						<li class="tbname">相关文章:</li>
-						<li class="msgarticle"><p>
-								<a href="#post/77.html">明心见性的一段对话</a>&nbsp;&nbsp;(2016-3-17
-								10:45:44)
-							</p>
-							<p>
-								<a href="#post/76.html">人生何尝不是一场赌局</a>&nbsp;&nbsp;(2016-3-11
-								13:23:45)
-							</p>
-							<p>
-								<a href="#post/74.html">初冬，景如故</a>&nbsp;&nbsp;(2015-11-21
-								17:2:53)
-							</p>
-							<p>
-								<a href="#post/73.html">从丁元英到叶子农</a>&nbsp;&nbsp;(2015-8-31
-								19:12:19)
-							</p>
-							<p>
-								<a href="#post/72.html">五十度灰的天空</a>&nbsp;&nbsp;(2015-4-30
-								4:47:49)
-							</p>
-							<p>
-								<a href="#post/71.html">见路不走，清明</a>&nbsp;&nbsp;(2015-4-1
-								11:59:32)
-							</p>
-							<p>
-								<a href="#post/70.html">神雕侠侣不过只是男欢女爱罢了</a>&nbsp;&nbsp;(2015-2-20
-								9:2:14)
-							</p>
-							<p>
-								<a href="#post/69.html">山花烂漫的季节，我们各自冷暖自知</a>&nbsp;&nbsp;(2015-2-4
-								11:59:13)
-							</p>
-							<p>
-								<a href="#post/68.html">一场梦而已。</a>&nbsp;&nbsp;(2015-1-20
-								5:11:26)
-							</p>
-							<p>
-								<a href="#post/67.html">To be or not to be？</a>&nbsp;&nbsp;(2014-12-23
-								15:56:28)
-							</p></li>
+					<ul class="msg mutuality" id="correlation">
+						
+						<!-- 相关文章填充位置 -->
+						
 					</ul>
+					
+					
 					<ul class="msg msghead">
 						<li class="tbname">留言列表:</li>
 					</ul>
