@@ -11,4 +11,6 @@ public interface ArticleService {
 
 	List<ArticleVo> getArticleById(String id);
 	
+	List<ArticleVo> getIndexArticle();
+	
 }
