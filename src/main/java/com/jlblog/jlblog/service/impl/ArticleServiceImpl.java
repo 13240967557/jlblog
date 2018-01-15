@@ -2,11 +2,11 @@ package com.jlblog.jlblog.service.impl;
 
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.jlblog.jlblog.dao.ArticleMapper;
-import com.jlblog.jlblog.pojo.Article;
 import com.jlblog.jlblog.pojo.ArticleVo;
 import com.jlblog.jlblog.pojo.Laber;
 import com.jlblog.jlblog.service.ArticleService;
@@ -22,6 +22,7 @@ public class ArticleServiceImpl implements ArticleService{
 	@Autowired
 	private ArticleMapper articleMapper;
 	
+	private static Logger logger = LogManager.getLogger(ArticleServiceImpl.class);
 	/**
 	 * 根据分类id查询文章
 	 */
@@ -33,12 +34,13 @@ public class ArticleServiceImpl implements ArticleService{
 			
 			return null;
 		}else {
-			
+			logger.info("根据分类id查询文章成功！");
 			for (ArticleVo article : articleList) {
 				//查询标签
 				List<Laber> laList = articleMapper.getLaberByAid(article.getId());
 				article.setLaList(laList);
 			}
+			logger.info("循环查询文章标签成功！");
 		}
 		return articleList;
 	}
@@ -51,6 +53,7 @@ public class ArticleServiceImpl implements ArticleService{
 		
 		//查询文章/内容
 		List<ArticleVo> list = articleMapper.getArticleById(id);
+		
 		if (list.size()<=0) {
 			
 			return null;
