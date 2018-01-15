@@ -20,6 +20,8 @@ public interface ArticleMapper {
 	List<ArticleVo> getArticleById(String id);
 
 	List<Laber> getLaberByAid(String id);
+
+	List<ArticleVo> getCorrelationArticle(String classify);
 	
 	List<ArticleVo> getIndexArticle();
 	
