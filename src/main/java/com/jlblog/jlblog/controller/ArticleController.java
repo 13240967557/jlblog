@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.jlblog.jlblog.pojo.Article;
@@ -26,6 +27,7 @@ public class ArticleController {
 	 * @param id
 	 * @return
 	 */
+	/*@RequestMapping(value = "/article/getActicleByClassify",method = RequestMethod.POST)*/
 	@RequestMapping("/article/getActicleByClassify")
 	@ResponseBody
 	public Map getActicleByClassify(String classify){
@@ -68,5 +70,27 @@ public class ArticleController {
 		
 		return map;
 	}
+	
+	/**
+	 * 首页展示所有类型文章  每种展示1篇
+	 * 
+	 */
+	@RequestMapping("/article/index")
+	@ResponseBody
+	public Map getIndexActicle(){
+	
+		Map map = new HashMap();
+		
+		List<ArticleVo> articleList = articleService.getIndexArticle();
+		if (articleList==null) {
+			map.put("error", 0);
+			map.put("msg", "查询数据失败！请重试！");
+			return map;
+		}
+		map.put("error", 200);
+		map.put("msg", articleList);
+		return map;
+	}
+	
 	
 }
