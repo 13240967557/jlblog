@@ -37,17 +37,10 @@
 				var correlation = "";
 				
 				/* 文章主体 */
-				content+="<div class='post-nav'>";
-				content+="<a class='l' href='#post/74.html' title='初冬，景如故'>« 上一篇</a>";
-				content+="<a class='r' href='#post/76.html' title='人生何尝不是一场赌局'>下一篇 »</a>";
-				content+="</div>";
 				content+="<h4 class='post-date'>"+article.createtime+"</h4>";
 				content+="<h2 class='post-title'>"+article.title+"​</h2>";
 				content+="<div class='post-body'>";
 				content+=article.articleDetails;
-				content+="<p style='text-indent: 0em;'>";
-				content+="<img src='#zb_users/upload/2016/2/2016021074509417.jpg' title='你我网' alt='你我网' />";
-				content+="</p>";
 				content+="</div>";
 				content+="<h5 class='post-tags'>";
 				content+="Tags: <span class='tags'>";
@@ -58,7 +51,7 @@
 				content+="</span>";
 				content+="</h5>";
 				content+="<h6 class='post-footer'>";
-				content+="分类:大生活 | 评论:5 | 浏览:<span id='spn75'></span>";
+				content+="分类:大生活 | 评论:"+article.browsenumber+" | 浏览:"+article.commentnumber+"<span id='spn75'></span>";
 				content+="<br />";
 				content+="<br />";
 				content+="<div style='width: 660px;' align='center'></div>";

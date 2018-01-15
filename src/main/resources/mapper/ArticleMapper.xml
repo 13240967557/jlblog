@@ -10,7 +10,7 @@
     	<result property="intro" column="intro"/>
     	<result property="createtime" column="createtime"/>
     	<result property="browsenumber" column="browsenumber"/>
-    	<result property="commentnumber" column="icommentnumberd"/>
+    	<result property="commentnumber" column="commentnumber"/>
     	<result property="articleimg" column="articleimg"/>
     	<result property="classify" column="classify"/>
     	<result property="articleDetails" column="details"/>    	

@@ -17,55 +17,58 @@
 <script src="${base}/js/jquery-3.1.1.js"></script>
 <script>
 	
-	$(function(){
-		$.ajax({
-			url:"/article/getActicleByClassify",
-			type:"Post",
-			data:"classify=2",
-			
-			success:function(msg){
-				var data = eval(msg);
-				if(data.error!=200){
-					alert(map.msg)
-					return
-				}
-				var list = data.msg;
-				var content = "";
-				for(var i = 0;i<list.length;i++){
-					
-					var li = list[i];
-					
-					content+="<h4 class='post-date'>"+li.createtime+"</h4>";
-					content+="<h2 class='post-title'>";
-					content+="<a href='article.ftl?id="+li.id+"'>"+li.title+"</a>";
-					content+="</h2>";
-					content+="<div class='post-body'>";
-					content+="<p>"+li.intro+"</p>";
-					content+="<p style='text-indent: 0em;'>";
-					content+="<a title="+li.title+" target='_self' href='#post/75.html'>";
-					content+="<img src="+li.articleimg+" title='啦啦啦' alt='啦啦啦'/>";
-					content+="</p>";
-					content+="</div>";
-					content+="<h5 class='post-tags'>";
-					content+="Tags: <span class='tags'>";
-					var ll = li.laList
-					for(var j = 0;j<ll.length;j++){
-						content+="<a href='#catalog.asp?tags=%E6%91%84%E5%BD%B1'>"+ll[j].name+"</a>&nbsp;&nbsp;";
-					}
-					content+="</span>"
-					content+="</h5>";
-					content+="<h6 class='post-footer'>";
-					content+="分类:大生活 | 评论:6 | 浏览:<span id='spn75'>";
-					content+="| <a href='article.ftl?id="+li.id+"'>阅读全文 ></a>";
-					content+="</h6>";
-					
-				}
+$(function(){
+	$.ajax({
+		url:"article/getActicleByClassify",
+		type:"Post",
+		data:"classify=2",
+		
+		success:function(msg){
+			var data = eval(msg);
+			if(data.error!=200){
+				alert(map.msg)
+				return
+			}
+			var list = data.msg;
+			var content = "";
+			for(var i = 0;i<list.length;i++){
 				
-				$("#article").append(content);
+				var li = list[i];
+				
+				content+="<h4 class='post-date'>"+li.createtime+"</h4>";
+				content+="<h2 class='post-title'>";
+				content+="<a href='article.ftl?id="+li.id+"'>"+li.title+"</a>";
+				content+="</h2>";
+				content+="<div class='post-body'>";
+				content+="<p>"+li.intro+"</p>";
+				content+="<p style='text-indent: 0em;'>";
+				content+="<a title="+li.title+" target='_self' href='#post/75.html'>";
+				if(li.articleimg!=null){	
+					content+="<img src="+li.articleimg+" title='啦啦啦' alt='啦啦啦'/>";
+				}
+				content+="</p>";
+				content+="</div>";
+				content+="<h5 class='post-tags'>";
+				content+="Tags: <span class='tags'>";
+				var ll = li.laList
+				for(var j = 0;j<ll.length;j++){
+					content+="<a href='#catalog.asp?tags=%E6%91%84%E5%BD%B1'>"+ll[j].name+"</a>&nbsp;&nbsp;";
+				}
+				content+="</span>"
+				content+="</h5>";
+				content+="<h6 class='post-footer'>";
+				content+="分类:大生活 | 评论:"+li.browsenumber+" | 浏览:"+li.commentnumber+"<span id='spn75'>";
+				content+="| <a href='article.ftl?id="+li.id+"'>阅读全文 ></a>";
+				content+="</h6>";
+				
 			}
 			
-		});
+			$("#article").append(content);
+		}
+		
 	});
+});
+
 	
 
 </script>
