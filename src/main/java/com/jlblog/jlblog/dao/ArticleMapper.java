@@ -21,4 +21,6 @@ public interface ArticleMapper {
 
 	List<Laber> getLaberByAid(String id);
 	
+	List<ArticleVo> getIndexArticle();
+	
 }

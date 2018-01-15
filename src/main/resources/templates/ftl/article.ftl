@@ -43,9 +43,6 @@
 				content+="<h2 class='post-title'>"+article.title+"​</h2>";
 				content+="<div class='post-body'>";
 				content+=article.articleDetails;
-				content+="<p style='text-indent: 0em;'>";
-				content+="<img src='#zb_users/upload/2016/2/2016021074509417.jpg' title='你我网' alt='你我网' />";
-				content+="</p>";
 				content+="</div>";
 				content+="<h5 class='post-tags'>";
 				content+="Tags: <span class='tags'>";

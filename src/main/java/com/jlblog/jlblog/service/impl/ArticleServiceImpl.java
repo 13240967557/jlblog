@@ -62,5 +62,25 @@ public class ArticleServiceImpl implements ArticleService{
 		}
 		return list;
 	}
+	
+	/**
+	 * 2018年1月12日14:23:25
+	 * 贾智源  首页站设 文章类型不同的  更新时间为最新的4篇文章 每种文章类型 选1篇 
+	 */
+	@Override
+	public List<ArticleVo> getIndexArticle() {
+		List<ArticleVo> indexArticle = articleMapper.getIndexArticle();
+		
+		if (indexArticle.size()<=0) {
+			return null;
+		}else {
+			//查询标签
+			for (ArticleVo article : indexArticle) {
+				List<Laber> laList = articleMapper.getLaberByAid(article.getId());
+				article.setLaList(laList);
+			}
+		}
+		return indexArticle;
+	}
 
 }

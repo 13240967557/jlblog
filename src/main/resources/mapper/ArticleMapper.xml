@@ -35,4 +35,10 @@
 		AND la.lid = l.id
     </select>
     
+    <!-- 网页首页展示 文章类型不同   最新添加的 4篇文章 -->
+    <select id="getIndexArticle" resultType="com.jlblog.jlblog.pojo.ArticleVo">
+    	SELECT * FROM article a
+		WHERE a.id = (SELECT id FROM article b WHERE a.classify=b.classify ORDER BY createtime DESC LIMIT 1)
+    </select>
+    
 </mapper>

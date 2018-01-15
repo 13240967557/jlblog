@@ -16,6 +16,60 @@
 <script src="${base}/style/custom.js" type="text/javascript"></script>
 <link rel="alternate" type="application/rss+xml" href="${base}/style/feed.css"
 	title="你我网 " />
+<script>
+	
+	$(function(){
+		$.ajax({
+			url:"article/index",
+			type:"Post",
+			data:"classify=1",
+			
+			success:function(msg){
+				var data = eval(msg);
+				if(data.error!=200){
+					alert(map.msg)
+					return
+				}
+				var list = data.msg;
+				var content = "";
+				for(var i = 0;i<list.length;i++){
+					
+					var li = list[i];
+					
+					content+="<h4 class='post-date'>"+li.createtime+"</h4>";
+					content+="<h2 class='post-title'>";
+					content+="<a href='article.ftl?id="+li.id+"'>"+li.title+"</a>";
+					content+="</h2>";
+					content+="<div class='post-body'>";
+					content+="<p>"+li.intro+"</p>";
+					content+="<p style='text-indent: 0em;'>";
+					content+="<a title="+li.title+" target='_self' href='#post/75.html'>";
+					content+="<img src="+li.articleimg+" title='啦啦啦' alt='啦啦啦'/>";
+					content+="</p>";
+					content+="</div>";
+					content+="<h5 class='post-tags'>";
+					content+="Tags: <span class='tags'>";
+					var ll = li.laList
+					for(var j = 0;j<ll.length;j++){
+						content+="<a href='#catalog.asp?tags=%E6%91%84%E5%BD%B1'>"+ll[j].name+"</a>&nbsp;&nbsp;";
+					}
+					content+="</span>"
+					content+="</h5>";
+					content+="<h6 class='post-footer'>";
+					content+="分类:大生活 | 评论:6 | 浏览:<span id='spn75'>";
+					content+="| <a href='article.ftl?id="+li.id+"'>阅读全文 ></a>";
+					content+="</h6>";
+					
+				}
+				
+				$("#article").append(content);
+			}
+			
+		});
+	});
+	
+
+</script>
 </head>
 <body class="multi default">
 	<div id="divAll">
@@ -25,261 +79,11 @@
 				<#include "model/head.ftl"/>
 				
 				<div id="divMain">
-					<div class="post multi-post cate4 auth1">
-						<h4 class="post-date">2016年3月17日</h4>
-						<h2 class="post-title">
-							<a href="./blog" target="_blank">明心见性的一段对话</a>
-						</h2>
-						<div class="post-body">
-							<p>以下是我和妹子聊到房屋拆迁话题时的对话，希望我们能一直保持平常心，认真做自己……</p>
-						</div>
-						<h5 class="post-tags">
-							Tags: <span class="tags"><a
-								href="#catalog.asp?tags=%E8%A7%89%E6%82%9F">觉悟</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E7%94%9F%E6%B4%BB">生活</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E4%BA%BA%E7%94%9F">人生</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E8%A7%84%E5%88%99">规则</a>&nbsp;&nbsp;</span>
-						</h5>
-						<h6 class="post-footer">
-							发布:圈圈 | 分类:如是观 | 评论:24 | 浏览:<span id="spn77"></span>
-							<script type="text/javascript">
-								LoadViewCount(77)
-							</script>
-							| <a href="#post/77.html">阅读全文 > </a>
-						</h6>
+				
+					<div class="post multi-post cate4 auth1" id="article">
+						
 					</div>
-					<div class="post multi-post cate2 auth1">
-						<h4 class="post-date">2016年3月11日</h4>
-						<h2 class="post-title">
-							<a href="#post/76.html">人生何尝不是一场赌局</a>
-						</h2>
-						<div class="post-body">
-							<p>
-								最近同事们沉陷红群无法自拔，作为一个旁观者还是挺开心的，再一次见证多巴胺和肾上腺素这些让人爽到爆的物质，在日常生活中扮演着魔鬼般的角色。人从来都不是理智的动物，总是感觉一切都在
-								……<br />
-							</p>
-						</div>
-						<h5 class="post-tags">
-							Tags: <span class="tags"><a
-								href="#catalog.asp?tags=%E7%94%9F%E6%B4%BB">生活</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E5%BF%83%E6%83%85">心情</a>&nbsp;&nbsp;</span>
-						</h5>
-						<h6 class="post-footer">
-							发布:圈圈 | 分类:大生活 | 评论:11 | 浏览:<span id="spn76"></span>
-							<script type="text/javascript">
-								LoadViewCount(76)
-							</script>
-							| <a href="#post/76.html">阅读全文 > </a>
-						</h6>
-					</div>
-					<div class="post multi-post cate2 auth1">
-						<h4 class="post-date">2016年1月26日</h4>
-						<h2 class="post-title">
-							<a href="#post/75.html">2016年就一个字：戒！​</a>
-						</h2>
-						<div class="post-body">
-							<p>这条路小时候走了无数次，将来还会更多……</p>
-							<p style="text-indent: 0em;">
-								<a title="2016年就一个字：戒！" target="_self" href="#post/75.html"><img
-									src="./images/2016021074509417.jpg" title="你我网" alt="你我网" /></a>
-							</p>
-						</div>
-						<h5 class="post-tags">
-							Tags: <span class="tags"><a
-								href="#catalog.asp?tags=%E6%91%84%E5%BD%B1">摄影</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E7%94%9F%E6%B4%BB">生活</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E5%BF%83%E6%83%85">心情</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E4%BA%BA%E7%94%9F">人生</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E8%A7%89%E6%82%9F">觉悟</a>&nbsp;&nbsp;</span>
-						</h5>
-						<h6 class="post-footer">
-							发布:圈圈 | 分类:大生活 | 评论:6 | 浏览:<span id="spn75"></span>
-							<script type="text/javascript">
-								LoadViewCount(75)
-							</script>
-							| <a href="#post/75.html">阅读全文 > </a>
-						</h6>
-					</div>
-					<div class="post multi-post cate2 auth1">
-						<h4 class="post-date">2015年11月21日</h4>
-						<h2 class="post-title">
-							<a href="#post/74.html">初冬，景如故</a>
-						</h2>
-						<div class="post-body">
-							<p>
-								进入冬季，天很冷，时不时下点小雨，街上妖风阵阵，吹的人老想咳嗽，已经半个月没见阳光了。感觉自己就像对面楼顶的那棵树，每天随风摇摆，心无所住
-								……<br />
-							</p>
-						</div>
-						<h5 class="post-tags">
-							Tags: <span class="tags"><a
-								href="#catalog.asp?tags=%E7%94%9F%E6%B4%BB">生活</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E5%BF%83%E6%83%85">心情</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E4%BA%BA%E7%94%9F">人生</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E5%9B%9E%E5%BF%86">回忆</a>&nbsp;&nbsp;</span>
-						</h5>
-						<h6 class="post-footer">
-							发布:圈圈 | 分类:大生活 | 评论:13 | 浏览:<span id="spn74"></span>
-							<script type="text/javascript">
-								LoadViewCount(74)
-							</script>
-							| <a href="#post/74.html">阅读全文 > </a>
-						</h6>
-					</div>
-					<div class="post multi-post cate4 auth1">
-						<h4 class="post-date">2015年8月31日</h4>
-						<h2 class="post-title">
-							<a href="#post/73.html">从丁元英到叶子农</a>
-						</h2>
-						<div class="post-body">
-							<div>
-								<p>
-									很久没更新了，不是没时间不想写，而是懒，懒得打字，懒得思考，时间就这样悄然而逝……<br />
-								</p>
-							</div>
-						</div>
-						<h5 class="post-tags">
-							Tags: <span class="tags"><a
-								href="#catalog.asp?tags=%E8%A7%89%E6%82%9F">觉悟</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E7%88%B1%E6%83%85">爱情</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E4%BA%BA%E7%94%9F">人生</a>&nbsp;&nbsp;</span>
-						</h5>
-						<h6 class="post-footer">
-							发布:圈圈 | 分类:如是观 | 评论:8 | 浏览:<span id="spn73"></span>
-							<script type="text/javascript">
-								LoadViewCount(73)
-							</script>
-							| <a href="#post/73.html">阅读全文 > </a>
-						</h6>
-					</div>
-					<div class="post multi-post cate4 auth1">
-						<h4 class="post-date">2015年4月30日</h4>
-						<h2 class="post-title">
-							<a href="#post/72.html">五十度灰的天空</a>
-						</h2>
-						<div class="post-body">
-							<p>
-								此刻窗外的天空还蒙着一层50度的灰，春天迁徙过来家燕已经孵出了一窝小燕子，在外面叽叽喳喳的叫着，朝气蓬勃。可是到了秋天又有几只小燕子跟随妈妈南去呢，这不得而知，我只看见有的还没学会飞就不幸夭折，有的再夏季的狂风暴雨中无力挣扎，这就是命，是规律
-								……</p>
-							<p style="text-indent: 0em;">
-								<a title="五十度灰的天空" target="_self" href="#post/72.html"><img
-									src="./images/2015043039978461.jpg" title="你我网－五十度灰的天空"
-									alt="五十度灰的天空" /></a>
-							</p>
-						</div>
-						<h5 class="post-tags">
-							Tags: <span class="tags"><a
-								href="#catalog.asp?tags=%E8%A7%89%E6%82%9F">觉悟</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E7%94%9F%E6%B4%BB">生活</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E8%A7%84%E5%88%99">规则</a>&nbsp;&nbsp;</span>
-						</h5>
-						<h6 class="post-footer">
-							发布:圈圈 | 分类:如是观 | 评论:12 | 浏览:<span id="spn72"></span>
-							<script type="text/javascript">
-								LoadViewCount(72)
-							</script>
-							| <a href="#post/72.html">阅读全文 > </a>
-						</h6>
-					</div>
-					<div class="post multi-post cate2 auth1">
-						<h4 class="post-date">2015年4月1日</h4>
-						<h2 class="post-title">
-							<a href="#post/71.html">见路不走，清明</a>
-						</h2>
-						<div class="post-body">
-							<p>
-								无论是面对厄运还是幸运都应该保持平常心，喜怒伤身，情绪伤神，执念误一生。医生笑着说这是他从医以来，见到的为数不多的案例，可谓是奇迹，而我的心却很平静，至此才真正领悟到了无为和不争。
-							</p>
-							<p style="text-indent: 0em;">
-								<a href="#post/71.html"><img
-									src="./images/2015040353883057.jpg" title="见路不走，清明" alt="见路不走，清明" /></a>
-							</p>
-						</div>
-						<h5 class="post-tags">
-							Tags: <span class="tags"><a
-								href="#catalog.asp?tags=%E7%94%9F%E6%B4%BB">生活</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E8%BF%87%E5%BE%80">过往</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E5%BF%83%E6%83%85">心情</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E6%91%84%E5%BD%B1">摄影</a>&nbsp;&nbsp;</span>
-						</h5>
-						<h6 class="post-footer">
-							发布:圈圈 | 分类:大生活 | 评论:14 | 浏览:<span id="spn71"></span>
-							<script type="text/javascript">
-								LoadViewCount(71)
-							</script>
-							| <a href="#post/71.html">阅读全文 > </a>
-						</h6>
-					</div>
-					<div class="post multi-post cate4 auth1">
-						<h4 class="post-date">2015年2月20日</h4>
-						<h2 class="post-title">
-							<a href="#post/70.html">神雕侠侣不过只是男欢女爱罢了</a>
-						</h2>
-						<div class="post-body">
-							<p>生是死的开始，死是生的延续，无论是什么状态都无法长久，不执著才是大智慧。而这些杨过连门槛都还碰不到，仅仅只是看破名利而已，他与小龙女的交集也只停留在男欢女爱罢了。看来但凡是人，无论怎样的修为，都逃不过一个情字……</p>
-						</div>
-						<h5 class="post-tags">
-							Tags: <span class="tags"><a
-								href="#catalog.asp?tags=%E8%A7%89%E6%82%9F">觉悟</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E4%BA%BA%E7%94%9F">人生</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E7%88%B1%E6%83%85">爱情</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E7%94%9F%E6%B4%BB">生活</a>&nbsp;&nbsp;</span>
-						</h5>
-						<h6 class="post-footer">
-							发布:圈圈 | 分类:如是观 | 评论:13 | 浏览:<span id="spn70"></span>
-							<script type="text/javascript">
-								LoadViewCount(70)
-							</script>
-							| <a href="#post/70.html">阅读全文 > </a>
-						</h6>
-					</div>
-					<div class="post multi-post cate2 auth1">
-						<h4 class="post-date">2015年2月4日</h4>
-						<h2 class="post-title">
-							<a href="#post/69.html">山花烂漫的季节，我们各自冷暖自知</a>
-						</h2>
-						<div class="post-body">
-							<p>时间久了，就对节日渐渐的没有了喜悦感，反而会更加是适应这种状态，在无声无息的岁月里挣扎着，徘徊着，就像一位弱视者伸着手步履蹒跚的向前走着，眼前有光和影子，却始终也看不清……</p>
-						</div>
-						<h5 class="post-tags">
-							Tags: <span class="tags"><a
-								href="#catalog.asp?tags=%E7%94%9F%E6%B4%BB">生活</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E8%BF%87%E5%BE%80">过往</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E5%9B%9E%E5%BF%86">回忆</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E5%BF%83%E6%83%85">心情</a>&nbsp;&nbsp;</span>
-						</h5>
-						<h6 class="post-footer">
-							发布:圈圈 | 分类:大生活 | 评论:5 | 浏览:<span id="spn69"></span>
-							<script type="text/javascript">
-								LoadViewCount(69)
-							</script>
-							| <a href="#post/69.html">阅读全文 > </a>
-						</h6>
-					</div>
-					<div class="post multi-post cate4 auth1">
-						<h4 class="post-date">2015年1月20日</h4>
-						<h2 class="post-title">
-							<a href="#post/68.html">一场梦而已。</a>
-						</h2>
-						<div class="post-body">
-							<p>
-								现在是凌晨五时，我从梦中惊醒，梦里的无奈与现实极其相似，仿佛就是现实生活的延续。梦中的我们是那么的自由，想哭就哭，想笑就笑。无所谓世俗的枷锁，更没有不好的情绪，平时不愿说的话，不方便做的事，在这里就这么自然而然的发生了。<br />
-							</p>
-						</div>
-						<h5 class="post-tags">
-							Tags: <span class="tags"><a
-								href="#catalog.asp?tags=%E7%94%9F%E6%B4%BB">生活</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E5%9B%9E%E5%BF%86">回忆</a>&nbsp;&nbsp;<a
-								href="#catalog.asp?tags=%E8%BF%87%E5%BE%80">过往</a>&nbsp;&nbsp;</span>
-						</h5>
-						<h6 class="post-footer">
-							发布:圈圈 | 分类:如是观 | 评论:15 | 浏览:<span id="spn68"></span>
-							<script type="text/javascript">
-								LoadViewCount(68)
-							</script>
-							| <a href="#post/68.html">阅读全文 > </a>
-						</h6>
-					</div>
+					
 					<div class="post pagebar">
 						<a href="#"><span class="page first-page">&laquo;</span></a><span
 							class="page now-page">1</span><a href="#catalog.asp?page=2"><span
