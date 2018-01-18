@@ -17,6 +17,9 @@
 <script src="${base}/js/jquery-3.1.1.js"></script>
 <script type="text/javascript">
 
+	/**
+	 * 页面初始化加载文章
+	 */
 	$(function(){
 		
 		var id = $("#id").val();
@@ -51,7 +54,7 @@
 				content+="</span>";
 				content+="</h5>";
 				content+="<h6 class='post-footer'>";
-				content+="分类:大生活 | 评论:"+article.browsenumber+" | 浏览:"+article.commentnumber+"<span id='spn75'></span>";
+				content+="分类:大生活 | 评论:"+article.commentnumber+" | 浏览:"+article.browsenumber+"<span id='spn75'></span>";
 				content+="<br />";
 				content+="<br />";
 				content+="<div style='width: 660px;' align='center'></div>";
@@ -77,7 +80,7 @@
 	});
 </script>
 </head>
-<body class="single">
+<body class="single" >
 	<div id="divAll">
 		<div id="divPage">
 			<div id="divMiddle">
@@ -163,9 +166,11 @@
 						<dt class="function_t">分享到：</dt>
 						<dd class="function_c">
 							<ul>
-								<li><img src="./images/logo/weixin.jpg"
-									height="110" width="110" border="0" alt="你我网微信公众平台"
-									title="微信扫一扫，关注圈圈的最新消息。" /></li>
+								<li>
+									<img src="./images/weixin.jpg"
+									height="110" width="110" border="0" alt="JLblog微信公众平台"
+									title="微信扫一扫，关注JLblog最新消息。" />
+								</li>
 								<li>
 									<!-- Baidu Button BEGIN -->
 									<div class="bdsharebuttonbox">
@@ -198,9 +203,12 @@
 									</script>
 									<!-- Baidu Button END -->
 								</li>
-								<li><a href="#feed.asp" target="_blank"><img
-										src="./image/logo/rss.png" height="31" width="88"
-										border="0" alt="订阅本站的 RSS 2.0 新闻聚合" /></a></li>
+								<li>
+									<a href="#feed.asp" target="_blank">
+										<img src="./images/rss.png" height="31" width="88" border="0" 
+										alt="订阅本站的 RSS 2.0 新闻聚合" />
+									</a>
+								</li>
 							</ul>
 						</dd>
 					</dl>
@@ -229,5 +237,7 @@ o[end]=function(){clearTimeout(shakeTimer)};
   
 	</script>
 	<!-- dd END -->
+	
+
 </body>
 </html>
