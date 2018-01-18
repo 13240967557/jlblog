@@ -49,4 +49,12 @@
 		WHERE a.id = (SELECT id FROM article b WHERE a.classify=b.classify ORDER BY createtime DESC LIMIT 1)
     </select>
     
+    <!-- 修改文章的浏览量 -->
+    <update id="updateArticleBrowsenumber" parameterType="string">
+    	UPDATE article 
+		SET browsenumber = (browsenumber+1)
+		WHERE id = #{id}
+    </update>
+    
+    
 </mapper>

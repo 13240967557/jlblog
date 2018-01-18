@@ -74,6 +74,15 @@
 			}
 		});
 		
+		$.ajax({
+			url:"/getip",
+			data:"id="+id,
+			
+			success:function(msg){
+				
+			}
+		});
+		
 	});
 </script>
 </head>

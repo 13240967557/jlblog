@@ -1,8 +1,17 @@
 package com.jlblog.jlblog.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.jlblog.jlblog.Utils.IpUtils;
+import com.jlblog.jlblog.dao.ArticleMapper;
+import com.jlblog.jlblog.pojo.ArticlePV;
+import com.jlblog.jlblog.service.ArticlepvService;
 
 
 
@@ -14,6 +23,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class IndexController {
+	@Autowired
+	private ArticlepvService articlepvService;
 	
 	@RequestMapping("/")
 	public String ind(){
@@ -24,6 +35,14 @@ public class IndexController {
 	public String index(@PathVariable String str){
 		System.out.println();
 		return "ftl/"+str;
+	}
+	
+	@RequestMapping("/getip")
+	@ResponseBody
+	public String getRemoteHost(HttpServletRequest request,String id){
+		String ip = IpUtils.getRemoteHost(request);
+		articlepvService.insertArticlePV(id,ip);
+		return ip; 
 	}
 	
 	

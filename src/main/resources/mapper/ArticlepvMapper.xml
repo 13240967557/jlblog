@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jlblog.jlblog.dao.ArticlepvMapper">
+    
+    <resultMap type="com.jlblog.jlblog.pojo.ArticlePV" id="aritclePV">
+    	<result property="id" column="id"/>
+    	<result property="pvcount" column="pvcount"/>
+    	<result property="ip" column="ip"/>	
+    </resultMap>
+    
+    <!-- 插入浏览记录 -->
+    <insert id="insertPV" parameterType="com.jlblog.jlblog.pojo.ArticlePV">
+    	INSERT INTO articlepv(id,pvcount,ip) value(#{id},#{pvcount},#{ip})
+    </insert>
+    
+    <!-- 查询同ip是否重复访问 -->
+    <select id="getArticlePVByapv" resultMap="aritclePV" parameterType="com.jlblog.jlblog.pojo.ArticlePV">
+    	SELECT * FROM articlepv 
+		WHERE id = #{id} 
+		AND ip = #{ip}
+    </select>
+    
+</mapper>

@@ -25,4 +25,6 @@ public interface ArticleMapper {
 	
 	List<ArticleVo> getIndexArticle();
 	
+	void updateArticleBrowsenumber(String id);
+	
 }
