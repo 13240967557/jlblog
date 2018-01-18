@@ -109,154 +109,13 @@
 					</ul>
 					
 					
-					<ul class="msg msghead">
-						<li class="tbname">留言列表:</li>
-					</ul>
-					<ins style="display: none;" id="AjaxCommentBegin"></ins>
-					<ul class="msg" id="cmt1475">
-						<li class="msgname"><img class="avatar"
-							src="http://cn.gravatar.com/avatar/e762b2d63651344d2ca3db6bcef8286b?s=40&d=mm"
-							alt="" width="32" />&nbsp;<span class="commentname"><a
-								href="#zb_system/function/c_urlredirect.asp?url=h6t4t3p0%3A5%2F0%2F5b8a8i4k5e9%2E3r7e2n3w2u7y3i1%2E8c6o7m1%2F5"
-								rel="nofollow" target="_blank">任务易</a></span><br />
-						<small>&nbsp;发布于&nbsp;2016-6-23 9:43:54&nbsp;&nbsp;<span
-								class="revertcomment"><a href="#comment"
-									onclick="RevertComment('1475')">回复该留言</a></span></small></li>
-						<li class="msgarticle">“戒”博主的思想高深，我等不知哪里去理解<!--rev1475-->
-							<a style="display: none;" id="AjaxCommentEnd1475"></a></li>
-					</ul>
-					<ul class="msg" id="cmt1467">
-						<li class="msgname"><img class="avatar"
-							src="http://cn.gravatar.com/avatar/366ee3bb52f8e81f6d065da93f5f88fb?s=40&d=mm"
-							alt="" width="32" />&nbsp;<span class="commentname"><a
-								href="#zb_system/function/c_urlredirect.asp?url=h6t4t1p7%3A9%2F7%2F3w0w1w9%2E6t3h1e5s9t6o7c0k1n5o4t5e9s5%2E4c4o6m6%2F7"
-								rel="nofollow" target="_blank">斯托克笔记</a></span><br />
-						<small>&nbsp;发布于&nbsp;2016-6-9 16:34:35&nbsp;&nbsp;<span
-								class="revertcomment"><a href="#comment"
-									onclick="RevertComment('1467')">回复该留言</a></span></small></li>
-						<li class="msgarticle">戒什么？<!--rev1467-->
-							<a style="display: none;" id="AjaxCommentEnd1467"></a></li>
-					</ul>
-					<ul class="msg" id="cmt1415">
-						<li class="msgname"><img class="avatar"
-							src="http://cn.gravatar.com/avatar/067731d3add7ae75ae73b617b43cfa05?s=40&d=mm"
-							alt="" width="32" />&nbsp;<span class="commentname"><a
-								href="#zb_system/function/c_urlredirect.asp?url=h8t9t5p6%3A6%2F6%2F9w7w5w6%2E3i7j2u5b6i4a7n8%2E9c1o3m2%2F2"
-								rel="nofollow" target="_blank">微信三级分销系统</a></span><br />
-						<small>&nbsp;发布于&nbsp;2016-4-15 16:44:08&nbsp;&nbsp;<span
-								class="revertcomment"><a href="#comment"
-									onclick="RevertComment('1415')">回复该留言</a></span></small></li>
-						<li class="msgarticle">戒啥呢？<!--rev1415-->
-							<a style="display: none;" id="AjaxCommentEnd1415"></a></li>
-					</ul>
-					<ul class="msg" id="cmt1374">
-						<li class="msgname"><img class="avatar"
-							src="http://cn.gravatar.com/avatar/73f1441dd101f9faa7b6853ea9ed9ee8?s=40&d=mm"
-							alt="" width="32" />&nbsp;<span class="commentname"><a
-								href="#zb_system/function/c_urlredirect.asp?url=h7t2t2p8%3A7%2F7%2F8w5w7w2%2E2m8e0e4l8e0g2e8%2E1c4o9m6"
-								rel="nofollow" target="_blank">米粒博客</a></span><br />
-						<small>&nbsp;发布于&nbsp;2016-3-1 22:58:26&nbsp;&nbsp;<span
-								class="revertcomment"><a href="#comment"
-									onclick="RevertComment('1374')">回复该留言</a></span></small></li>
-						<li class="msgarticle">加油 <!--rev1374-->
-							<a style="display: none;" id="AjaxCommentEnd1374"></a></li>
-					</ul>
-					<ul class="msg" id="cmt1371">
-						<li class="msgname"><img class="avatar"
-							src="#zb_users/avatar/0.png" alt="" width="32" />&nbsp;<span
-							class="commentname"><a
-								href="#zb_system/function/c_urlredirect.asp?url=h4t1t4p1%3A3%2F8%2F8b9l8o2g3%2E0s5i5n1a3%2E2c3o2m3%2E5c2n3%2F7b6a2i8z9h0i2j3"
-								rel="nofollow" target="_blank">百芷集</a></span><br />
-						<small>&nbsp;发布于&nbsp;2016-2-21 15:52:47&nbsp;&nbsp;<span
-								class="revertcomment"><a href="#comment"
-									onclick="RevertComment('1371')">回复该留言</a></span></small></li>
-						<li class="msgarticle">戒色戒酒戒毒<!--rev1371-->
-							<a style="display: none;" id="AjaxCommentEnd1371"></a></li>
-					</ul>
-					<ul class="msg" id="cmt1365">
-						<li class="msgname"><img class="avatar"
-							src="http://cn.gravatar.com/avatar/bda09c15de8028b03a5165944368f745?s=40&d=mm"
-							alt="" width="32" />&nbsp;<span class="commentname"><a
-								href="#zb_system/function/c_urlredirect.asp?url=h8t2t0p5%3A3%2F0%2F9L2o1u7i7s3H2a5n6%2E9c6o2m8%2F9"
-								rel="nofollow" target="_blank">路易大叔</a></span><br />
-						<small>&nbsp;发布于&nbsp;2016-2-11 23:40:17&nbsp;&nbsp;<span
-								class="revertcomment"><a href="#comment"
-									onclick="RevertComment('1365')">回复该留言</a></span></small></li>
-						<li class="msgarticle">戒就一个字 不希望你会说第二次啊<!--rev1365-->
-							<ul class="msg" id="cmt1366">
-								<li class="msgname"><img class="avatar"
-									src="http://cn.gravatar.com/avatar/e820556ba345a1515bb6a01b750c45e5?s=40&d=mm"
-									alt="" width="32" />&nbsp;<span class="commentname"><a
-										href="#zb_system/function/c_urlredirect.asp?url=h4t3t9p6%3A8%2F0%2F6h3t6t2p4s3%3A1%2F8%2F9c9h5o1j3e7m5m5y6%2E2w8o4r7d6p9r7e1s5s0%2E9c2o6m6"
-										rel="nofollow" target="_blank">ChoJemmy</a></span><br />
-								<small>&nbsp;发布于&nbsp;2016-2-13 22:19:49&nbsp;&nbsp;<span
-										class="revertcomment"><a href="#comment"
-											onclick="RevertComment('1366')">回复该留言</a></span></small></li>
-								<li class="msgarticle">戒啥<!--rev1366-->
-									<a style="display: none;" id="AjaxCommentEnd1366"></a></li>
-							</ul> <a style="display: none;" id="AjaxCommentEnd1365"></a></li>
-					</ul>
-					<ins style="display: none;" id="AjaxCommentEnd"></ins>
+					<!-- UY BEGIN -->
+					<div id="uyan_frame"></div>
+					<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2155313"></script>
+					<!-- UY END -->
+					
 
-					<div class="post" id="divCommentPost">
-						<p class="posttop">
-							<a name="comment">发表留言:</a><small><a rel="nofollow"
-								id="cancel-reply" href="#divCommentPost" style="display: none;">取消回复</a></small>
-						</p>
-						<form id="frmSumbit" target="_self" method="post"
-							action="#zb_system/cmd.asp?act=cmt&amp;key=9193b34f">
-							<input type="hidden" name="inpId" id="inpId" value="75" /> <input
-								type="hidden" name="inpArticle" id="inpArticle" value="" /> <input
-								type="hidden" name="inpRevID" id="inpRevID" value="" />
-							<p>
-								<input type="text" name="inpName" id="inpName" class="text"
-									value="" size="28" tabindex="1" /> <label for="inpName">名称（必填）</label>
-							</p>
-							<p>
-								<input type="text" name="inpEmail" id="inpEmail" class="text"
-									value="" size="28" tabindex="2" /> <label for="inpEmail">邮箱</label>
-							</p>
-							<p>
-								<input type="text" name="inpHomePage" id="inpHomePage"
-									class="text" value="" size="28" tabindex="3" /> <label
-									for="inpHomePage">网站链接</label>
-							</p>
-
-							<p>
-								<input type="text" name="inpVerify" id="inpVerify" class="text"
-									value="" size="28" tabindex="4" /> <label for="inpVerify">验证（必填）</label>
-								<img
-									style="border: 1px solid silver; width: 60px; height: 20px;"
-									src="#zb_system/function/c_validcode.asp?name=commentvalid"
-									alt="" title="" />
-							</p>
-
-							<p>
-								<label for="txaArticle">正文（必填）(留言最长字数:1000)</label>
-							</p>
-							<p>
-								<textarea name="txaArticle" id="txaArticle"
-									onchange="GetActiveText(this.id);"
-									onclick="GetActiveText(this.id);"
-									onfocus="GetActiveText(this.id);" class="text" cols="50"
-									rows="4" tabindex="5"></textarea>
-							</p>
-							<p>
-								<input name="btnSumbit" type="submit" tabindex="6" value="提交"
-									onclick="JavaScript:return VerifyMessage()" class="button" />
-								<input type="checkbox" name="chkRemember" value="1"
-									id="chkRemember" /> <label for="chkRemember">记住我,下次回复时不用重新输入个人信息</label>
-							</p>
-							<script language="JavaScript" type="text/javascript">
-								objActive = "txaArticle";
-								ExportUbbFrame();
-							</script>
-						</form>
-						<p class="postbottom">◎欢迎参与讨论，请在这里发表您的看法、交流您的观点。</p>
-						<script language="JavaScript" type="text/javascript">
-							LoadRememberInfo();
-						</script>
-					</div>
+					
 				</div>
 				<div id="divSidebar">
 
@@ -319,11 +178,11 @@
 								<li>
 									<!-- Baidu Button BEGIN -->
 									<div class="bdsharebuttonbox">
-										<a href="#" class="bds_more" data-cmd="more"></a><a
-											title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a><a
-											title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a><a
-											title="分享到百度贴吧" href="#" class="bds_tieba" data-cmd="tieba"></a><a
-											title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a>
+										<a href="#" class="bds_more" data-cmd="more"></a>
+										<a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a>
+										<a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a>
+										<a title="分享到百度贴吧" href="#" class="bds_tieba" data-cmd="tieba"></a>
+										<a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a>
 									</div>
 									<script>
 										window._bd_share_config = {
