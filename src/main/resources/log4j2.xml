@@ -10,7 +10,6 @@
             <PatternLayout pattern="${PATTERN}" />  
         </Console>  
         
-        
     </appenders>  
       
     <!--配置mybatis日志-->
