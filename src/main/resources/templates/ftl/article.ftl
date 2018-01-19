@@ -40,7 +40,7 @@
 				var correlation = "";
 				
 				/* 文章主体 */
-				content+="<h4 class='post-date'>"+article.createtime+"</h4>";
+				content+="<h4 class='post-date'>浏览:"+article.browsenumber+"<span id='spn75'></span> | "+article.createtime+"</h4>";
 				content+="<h2 class='post-title'>"+article.title+"​</h2>";
 				content+="<div class='post-body'>";
 				content+=article.articleDetails;
@@ -54,7 +54,7 @@
 				content+="</span>";
 				content+="</h5>";
 				content+="<h6 class='post-footer'>";
-				content+="浏览:"+article.browsenumber+"<span id='spn75'></span>";
+				content+="";
 				content+="<br />";
 				content+="<br />";
 				content+="<div style='width: 660px;' align='center'></div>";

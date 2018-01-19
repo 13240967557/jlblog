@@ -36,7 +36,7 @@
 					
 					var li = list[i];
 					
-					content+="<h4 class='post-date'>"+li.createtime+"</h4>";
+					content+="<h4 class='post-date'>浏览:"+li.browsenumber+"<span id='spn75'></span> | "+li.createtime+"</h4>";
 					content+="<h2 class='post-title'>";
 					content+="<a href='article.ftl?id="+li.id+"'>"+li.title+"</a>";
 					content+="</h2>";
@@ -56,8 +56,7 @@
 					content+="</span>"
 					content+="</h5>";
 					content+="<h6 class='post-footer'>";
-					content+="分类:大生活 | 评论:6 | 浏览:<span id='spn75'>";
-					content+="| <a href='article.ftl?id="+li.id+"'>阅读全文 ></a>";
+					content+="<a href='article.ftl?id="+li.id+"'>阅读全文 ></a>";
 					content+="</h6>";
 					
 				}
