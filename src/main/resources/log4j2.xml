@@ -10,10 +10,7 @@
             <PatternLayout pattern="${PATTERN}" />  
         </Console>  
         
-         <!-- 常用于开发环境,把日志记录到文件中,默认追加 -->
-        <file name="file" fileName="${LOG_HOME}/test.log" append="false">
-            <patternLayout pattern="${PATTERN}" />
-        </file>
+        
     </appenders>  
       
     <!--配置mybatis日志-->
