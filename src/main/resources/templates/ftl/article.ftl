@@ -54,7 +54,7 @@
 				content+="</span>";
 				content+="</h5>";
 				content+="<h6 class='post-footer'>";
-				content+="分类:大生活 | 评论:"+article.commentnumber+" | 浏览:"+article.browsenumber+"<span id='spn75'></span>";
+				content+="浏览:"+article.browsenumber+"<span id='spn75'></span>";
 				content+="<br />";
 				content+="<br />";
 				content+="<div style='width: 660px;' align='center'></div>";
