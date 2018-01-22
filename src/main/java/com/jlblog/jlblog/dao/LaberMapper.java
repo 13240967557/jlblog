@@ -17,4 +17,6 @@ public interface LaberMapper {
 	
 	List<Laber> selectIndexLaber();
 	
+	List<ArticleVo> selectArticleByTag(String id);
+	
 }

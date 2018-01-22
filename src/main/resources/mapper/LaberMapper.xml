@@ -9,11 +9,28 @@
     	<result property="name" column="name"/>	
     </resultMap>
     
+    <resultMap type="com.jlblog.jlblog.pojo.ArticleVo" id="aritcleVo">
+    	<result property="id" column="id"/>
+    	<result property="title" column="title"/>
+    	<result property="intro" column="intro"/>
+    	<result property="createtime" column="createtime"/>
+    	<result property="browsenumber" column="browsenumber"/>
+    	<result property="commentnumber" column="commentnumber"/>
+    	<result property="articleimg" column="articleimg"/>
+    	<result property="classify" column="classify"/>
+    	<result property="articleDetails" column="details"/>    	
+    </resultMap>
+    
     <!-- 查询首页需要展示的标签进行展示 -->
     <select id="selectIndexLaber" resultMap="laber">
     	SELECT * FROM laber 
 		ORDER BY id ASC
 		LIMIT 14
+    </select>
+    
+    <select id="selectArticleByTag" parameterType="string" resultMap="aritcleVo">
+    	SELECT * FROM article a
+		WHERE a.id IN (SELECT aid FROM laberarticle WHERE lid = #{id})
     </select>
     
     
