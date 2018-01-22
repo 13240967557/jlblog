@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jlblog.jlblog.dao.LaberMapper">
+    
+    <resultMap type="com.jlblog.jlblog.pojo.Laber" id="laber">
+    	<result property="id" column="id"/>
+    	<result property="name" column="name"/>	
+    </resultMap>
+    
+    <!-- 查询首页需要展示的标签进行展示 -->
+    <select id="selectIndexLaber" resultMap="laber">
+    	SELECT * FROM laber 
+		ORDER BY id ASC
+		LIMIT 14
+    </select>
+    
+    
+</mapper>
