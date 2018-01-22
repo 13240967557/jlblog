@@ -70,72 +70,10 @@
 
 
 				</div>
-				<div id="divSidebar">
-
-					<dl class="function" id="divSearchPanel">
-						<dt class="function_t">搜索</dt>
-						<dd class="function_c">
-							<div>
-								<div id="mod_searchpanel" style="display: none;">
-									<script type="text/javascript">
-										LoadFunction('searchpanel');
-									</script>
-								</div>
-							</div>
-						</dd>
-					</dl>
-					<dl class="function" id="divTags">
-						<dt class="function_t">按标签浏览</dt>
-						<dd class="function_c">
-							<ul>
-								<li class="tag-name tag-name-size-2"><a
-									href="#catalog.asp?tags=%E8%A7%89%E6%82%9F">觉悟<span
-										class="tag-count"> (18)</span></a></li>
-								<li class="tag-name tag-name-size-3"><a
-									href="#catalog.asp?tags=%E4%BA%BA%E7%94%9F">人生<span
-										class="tag-count"> (26)</span></a></li>
-								<li class="tag-name tag-name-size-2"><a
-									href="#catalog.asp?tags=%E6%91%84%E5%BD%B1">摄影<span
-										class="tag-count"> (15)</span></a></li>
-								<li class="tag-name tag-name-size-2"><a
-									href="#catalog.asp?tags=%E7%88%B1%E6%83%85">爱情<span
-										class="tag-count"> (11)</span></a></li>
-								<li class="tag-name tag-name-size-3"><a
-									href="#catalog.asp?tags=%E5%BF%83%E6%83%85">心情<span
-										class="tag-count"> (34)</span></a></li>
-								<li class="tag-name tag-name-size-3"><a
-									href="#catalog.asp?tags=%E7%94%9F%E6%B4%BB">生活<span
-										class="tag-count"> (28)</span></a></li>
-								<li class="tag-name tag-name-size-1"><a
-									href="#catalog.asp?tags=%E9%9F%B3%E4%B9%90">音乐<span
-										class="tag-count"> (6)</span></a></li>
-								<li class="tag-name tag-name-size-0"><a
-									href="#catalog.asp?tags=%E8%A7%84%E5%88%99">规则<span
-										class="tag-count"> (5)</span></a></li>
-								<li class="tag-name tag-name-size-0"><a
-									href="#catalog.asp?tags=%E5%A4%95%E9%98%B3">夕阳<span
-										class="tag-count"> (1)</span></a></li>
-								<li class="tag-name tag-name-size-0"><a
-									href="#catalog.asp?tags=%E5%AF%82%E5%AF%9E">寂寞<span
-										class="tag-count"> (3)</span></a></li>
-								<li class="tag-name tag-name-size-1"><a
-									href="#catalog.asp?tags=%E8%BF%87%E5%BE%80">过往<span
-										class="tag-count"> (8)</span></a></li>
-								<li class="tag-name tag-name-size-0"><a
-									href="#catalog.asp?tags=%E8%A5%BF%E4%B9%A1">西乡<span
-										class="tag-count"> (3)</span></a></li>
-								<li class="tag-name tag-name-size-1"><a
-									href="#catalog.asp?tags=%E5%9B%9E%E5%BF%86">回忆<span
-										class="tag-count"> (8)</span></a></li>
-								<li class="tag-name tag-name-size-0"><a
-									href="#catalog.asp?tags=%E6%97%85%E8%A1%8C">旅行<span
-										class="tag-count"> (1)</span></a></li>
-							</ul>
-						</dd>
-					</dl>
-
-				</div>
 				
+				<!-- 搜索内容 -->
+				<#include "model/search.ftl"/>
+				<!-- 网页底部内容 -->
 				<#include "model/foot.ftl"/>
 
 				<div class="clear"></div>
@@ -159,6 +97,5 @@ o[end]=function(){clearTimeout(shakeTimer)};
 	</script>
 	<!-- dd END -->
 </body>
-<#include "model/ttt.ftl"/>
 </html>
 <!-- 2016-7-21 10:39:49 -->

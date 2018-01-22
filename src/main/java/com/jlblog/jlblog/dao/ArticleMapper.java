@@ -27,4 +27,6 @@ public interface ArticleMapper {
 	
 	void updateArticleBrowsenumber(String id);
 	
+	List<ArticleVo> selectArticleByTag(String id);
+	
 }
