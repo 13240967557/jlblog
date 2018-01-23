@@ -1,15 +1,18 @@
 package com.jlblog.jlblog.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.jlblog.jlblog.pojo.ArticleVo;
 import com.jlblog.jlblog.pojo.Laber;
 import com.jlblog.jlblog.service.LaberService;
-import com.sun.javafx.collections.MappingChange.Map;
+import com.sun.org.apache.regexp.internal.recompile;
 
 /**
  * 文章标签
@@ -31,9 +34,19 @@ public class LaberController {
 	
 	@RequestMapping("/tagarticle")
 	@ResponseBody
-	public Map tagarticle(){
+	public Map tagarticle(String id){
+		Map data = new HashMap();
 		
-		return null;
+		List<ArticleVo> artList = laberService.selectArticleByTag(id);
+		if(artList.size()==0||artList==null){
+			data.put("stats", "300");
+			data.put("msg", "亲！ 没有相关文章");
+			return data;
+		}
+		data.put("stats", "200");
+		data.put("data", artList);
+		
+		return data;
 	}
 	
 }

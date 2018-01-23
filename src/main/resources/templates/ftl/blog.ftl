@@ -35,20 +35,20 @@
 				
 				<script>
 				$(function(){
-					alert($("#id").val());
-					
-					/* $.ajax({
+					var id = $("#id").val();
+					$.ajax({
 						url:"tagarticle",
 						type:"Post",
-						data:"classify=1",
+						data:"id="+id,
 						
 						success:function(msg){
 							var data = eval(msg);
-							if(data.error!=200){
-								alert(map.msg)
+							if(data.stats=="300"){
+								alert(data.msg)
 								return
 							}
-							var list = data.msg;
+							var list = data.data;
+							
 							var content = "";
 							for(var i = 0;i<list.length;i++){
 								
@@ -69,7 +69,7 @@
 								content+="Tags: <span class='tags'>";
 								var ll = li.laList
 								for(var j = 0;j<ll.length;j++){
-									content+="<a href='#catalog.asp?tags=%E6%91%84%E5%BD%B1'>"+ll[j].name+"</a>&nbsp;&nbsp;";
+									content+="<a href='${base}/blog?tagid="+ll[j].id+"'>"+ll[j].name+"</a>&nbsp;&nbsp;";
 								}
 								content+="</span>"
 								content+="</h5>";
@@ -82,7 +82,7 @@
 							$("#article").append(content);
 						}
 						
-					}); */
+					});
 					
 					
 					

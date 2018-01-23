@@ -5,7 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.jlblog.jlblog.dao.ArticleMapper;
 import com.jlblog.jlblog.dao.LaberMapper;
+import com.jlblog.jlblog.pojo.ArticleVo;
 import com.jlblog.jlblog.pojo.Laber;
 import com.jlblog.jlblog.service.LaberService;
 /**
@@ -19,10 +21,19 @@ public class LaberServiceImpl implements LaberService {
 	@Autowired
 	private LaberMapper laberMapper;
 	
+	@Autowired
+	private ArticleMapper articleMapper;
+	
 	@Override
 	public List<Laber> selectIndexLaber() {
 		List<Laber> laberlist = laberMapper.selectIndexLaber();
 		return laberlist;
+	}
+
+	@Override
+	public List<ArticleVo> selectArticleByTag(String id) {
+		List<ArticleVo> artlist = laberMapper.selectArticleByTag(id);
+		return artlist;
 	}
 
 }

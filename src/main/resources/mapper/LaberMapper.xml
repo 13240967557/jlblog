@@ -19,6 +19,10 @@
     	<result property="articleimg" column="articleimg"/>
     	<result property="classify" column="classify"/>
     	<result property="articleDetails" column="details"/>    	
+    	<collection property="laList" ofType="com.jlblog.jlblog.pojo.Laber">
+    		<id property="id" column="laberid"/>
+	        <result property="name" column="labername"/>  
+    	</collection>
     </resultMap>
     
     <!-- 查询首页需要展示的标签进行展示 -->
@@ -29,8 +33,10 @@
     </select>
     
     <select id="selectArticleByTag" parameterType="string" resultMap="aritcleVo">
-    	SELECT * FROM article a
+    	SELECT a.*,l.name labername,l.id laberid FROM article a,laber l,laberarticle la
 		WHERE a.id IN (SELECT aid FROM laberarticle WHERE lid = #{id})
+		AND la.lid = l.id
+		AND la.aid = a.id
     </select>
     
     
