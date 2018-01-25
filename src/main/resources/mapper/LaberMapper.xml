@@ -10,7 +10,7 @@
     </resultMap>
     
     <resultMap type="com.jlblog.jlblog.pojo.ArticleVo" id="aritcleVo">
-    	<result property="id" column="id"/>
+    	<id property="id" column="id"/>
     	<result property="title" column="title"/>
     	<result property="intro" column="intro"/>
     	<result property="createtime" column="createtime"/>
@@ -35,6 +35,14 @@
     <select id="selectArticleByTag" parameterType="string" resultMap="aritcleVo">
     	SELECT a.*,l.name labername,l.id laberid FROM article a,laber l,laberarticle la
 		WHERE a.id IN (SELECT aid FROM laberarticle WHERE lid = #{id})
+		AND la.lid = l.id
+		AND la.aid = a.id
+    </select>
+    
+    <select id="selectLikeArticle" parameterType="com.jlblog.jlblog.pojo.ArticleVo" resultMap="aritcleVo">
+    	SELECT a.*,l.name labername,l.id laberid 
+		FROM article a,laber l,laberarticle la
+		WHERE a.id IN (SELECT id FROM article WHERE title LIKE "%${title}%")
 		AND la.lid = l.id
 		AND la.aid = a.id
     </select>

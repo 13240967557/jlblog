@@ -5,8 +5,12 @@
 						<dd class="function_c">
 							<div>
 								<div style="padding: 0.5em 0 0.5em 1em;">
-									<form method="post" action="#zb_system/cmd.asp?act=Search">
-										<input type="text" name="edtSearch" id="edtSearch" size="12" />
+									<form method="post" action="${base}/laber/search">
+										<#if articleVo??>	
+											<input type="text" value="${articleVo.title}" name="title" id="edtSearch" size="12" />
+										<#else>
+											<input type="text" name="title" id="edtSearch" size="12" />
+										</#if>
 										<input type="submit" value="搜索" name="btnPost" id="btnPost" />
 									</form>
 								</div>
@@ -83,8 +87,8 @@
 						<dt class="function_t">友情链接</dt>
 						<dd class="function_c">
 							<ul>
-								<li><a href="http://www.nszbk.com" target="_blank">瑬蒗的鱼博客</a>
-									<a href="http://www.mybiketimes.com/" target="_blank">单车岁月</a>
+								<li><a href="http://blog.csdn.net/jiazhiyuan0" target="_blank">瑬蒗的鱼博客</a>
+									<a href="https://github.com/13240967557" target="_blank">gitup</a>
 									<a href="http://www.lopwon.com/" target="_blank">立云图志</a></li>
 								<li><a href="http://qingchun.org/" target="_blank">青春</a> <a
 									href="http://www.gaohaipeng.com" target="_blank">高海鹏博客</a> <a
@@ -108,7 +112,7 @@
 						<dt class="function_t">分享到：</dt>
 						<dd class="function_c">
 							<ul>
-								<li><img src="./images/weixin.jpg" height="110" width="110"
+								<li><img src="${base}/images/weixin.jpg" height="110" width="110"
 									border="0" alt="你我网微信公众平台" title="微信扫一扫，关注圈圈的最新消息。" /></li>
 								<li>
 									<!-- Baidu Button BEGIN -->
@@ -143,7 +147,7 @@
 									<!-- Baidu Button END -->
 								</li>
 								<li><a href="#feed.asp" target="_blank"><img
-										src="./images/rss.png" height="31" width="88" border="0"
+										src="${base}/images/rss.png" height="31" width="88" border="0"
 										alt="订阅本站的 RSS 2.0 新闻聚合" /></a></li>
 							</ul>
 						</dd>

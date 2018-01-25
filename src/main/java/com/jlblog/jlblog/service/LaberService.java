@@ -11,4 +11,6 @@ public interface LaberService {
 	
 	List<ArticleVo> selectArticleByTag(String id);
 	
+	List<ArticleVo> selectLikeArticle(ArticleVo av);
+	
 }

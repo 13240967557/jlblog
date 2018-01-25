@@ -21,9 +21,6 @@ public class LaberServiceImpl implements LaberService {
 	@Autowired
 	private LaberMapper laberMapper;
 	
-	@Autowired
-	private ArticleMapper articleMapper;
-	
 	@Override
 	public List<Laber> selectIndexLaber() {
 		List<Laber> laberlist = laberMapper.selectIndexLaber();
@@ -34,6 +31,12 @@ public class LaberServiceImpl implements LaberService {
 	public List<ArticleVo> selectArticleByTag(String id) {
 		List<ArticleVo> artlist = laberMapper.selectArticleByTag(id);
 		return artlist;
+	}
+
+	@Override
+	public List<ArticleVo> selectLikeArticle(ArticleVo av) {
+		List<ArticleVo> avlist = laberMapper.selectLikeArticle(av);
+		return avlist;
 	}
 
 }

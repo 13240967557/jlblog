@@ -14,6 +14,7 @@
 <script src="${base}/style/common.js" type="text/javascript"></script>
 <script src="${base}/style/c_html_js_add.js" type="text/javascript"></script>
 <script src="${base}/style/custom.js" type="text/javascript"></script>
+<script src="${base}/js/jquery-3.1.1.js" type="text/javascript"></script>
 <link rel="alternate" type="application/rss+xml" href="${base}/style/feed.css"
 	title="你我网 " />
 </head>
@@ -33,11 +34,13 @@
 				</div>
 				
 				
-				<script>
+				<script type="text/javascript">
 				$(function(){
+					
 					var id = $("#id").val();
+					
 					$.ajax({
-						url:"tagarticle",
+						url:"/tagarticle",
 						type:"Post",
 						data:"id="+id,
 						
@@ -48,7 +51,6 @@
 								return
 							}
 							var list = data.data;
-							
 							var content = "";
 							for(var i = 0;i<list.length;i++){
 								
@@ -74,7 +76,7 @@
 								content+="</span>"
 								content+="</h5>";
 								content+="<h6 class='post-footer'>";
-								content+="<a href='article.ftl?id="+li.id+"'>阅读全文 ></a>";
+								content+="<a href='${base}/article.ftl?id="+li.id+"'>阅读全文 ></a>";
 								content+="</h6>";
 								
 							}

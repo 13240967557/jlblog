@@ -37,7 +37,7 @@
 					
 					content+="<h4 class='post-date'>浏览:"+li.browsenumber+"<span id='spn75'></span> | "+li.createtime+"</h4>";
 					content+="<h2 class='post-title'>";
-					content+="<a href='article.ftl?id="+li.id+"'>"+li.title+"</a>";
+					content+="<a href='${base}/article.ftl?id="+li.id+"'>"+li.title+"</a>";
 					content+="</h2>";
 					content+="<div class='post-body'>";
 					content+="<p>"+li.intro+"</p>";
@@ -50,12 +50,12 @@
 					content+="Tags: <span class='tags'>";
 					var ll = li.laList
 					for(var j = 0;j<ll.length;j++){
-						content+="<a href='#catalog.asp?tags=%E6%91%84%E5%BD%B1'>"+ll[j].name+"</a>&nbsp;&nbsp;";
+						content+="<a href='${base}/blog?tagid="+ll[j].id+"'>"+ll[j].name+"</a>&nbsp;&nbsp;";
 					}
 					content+="</span>"
 					content+="</h5>";
 					content+="<h6 class='post-footer'>";
-					content+="<a href='article.ftl?id="+li.id+"'>阅读全文 ></a>";
+					content+="<a href='${base}/article.ftl?id="+li.id+"'>阅读全文 ></a>";
 					content+="</h6>";
 					
 				}

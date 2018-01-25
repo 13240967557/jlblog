@@ -1,11 +1,13 @@
 package com.jlblog.jlblog.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -47,6 +49,23 @@ public class LaberController {
 		data.put("data", artList);
 		
 		return data;
+	}
+	
+	/**000 
+	 * 贾智源
+	 * 2018年1月24日09:36:41
+	 * 模糊查询 回显数据
+	 * 
+	 * 这里出现  一个 问题 通过网络调用远程数据库
+	 */
+	@RequestMapping("/laber/search")
+	public String search(ArticleVo av, Model model){
+		
+		//av.setTitle("看");
+		
+		List<ArticleVo> avlist = laberService.selectLikeArticle(av);
+		model.addAttribute("avlist", avlist);
+		return "ftl/searchblog";
 	}
 	
 }

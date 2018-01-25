@@ -49,7 +49,7 @@
 				content+="Tags: <span class='tags'>";
 				var laList = article.laList;
 				for(var i = 0;i<laList.length;i++){
-					content+="<a href='#catalog.asp?tags=%E6%91%84%E5%BD%B1'>"+laList[i].name+"</a>&nbsp;&nbsp;";	
+					content+="<a href='${base}/blog?tagid='"+laList[i].id+">"+laList[i].name+"</a>&nbsp;&nbsp;";	
 				}
 				content+="</span>";
 				content+="</h5>";

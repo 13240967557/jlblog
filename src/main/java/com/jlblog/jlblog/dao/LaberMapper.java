@@ -19,4 +19,6 @@ public interface LaberMapper {
 	
 	List<ArticleVo> selectArticleByTag(String id);
 	
+	List<ArticleVo> selectLikeArticle(ArticleVo av);
+	
 }
