@@ -39,4 +39,10 @@ public class LaberServiceImpl implements LaberService {
 		return avlist;
 	}
 
+	@Override
+	public List<Laber> selectAllLaber() {
+		List<Laber> laberlist = laberMapper.selectAllLaber();
+		return laberlist;
+	}
+
 }

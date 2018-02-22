@@ -1,10 +1,7 @@
 <div id="divBottom">
-	<h3 id="BlogCopyRight">陕ICP备11002139号-1</h3>
+	<h3 id="BlogCopyRight"><a href="http://www.miitbeian.gov.cn/">豫ICP备18002777号</a></h3>
 	<h4 id="BlogPowerBy">
-		Powered By <a href="http://www.rainbowsoft.org/"
-			title="RainbowSoft Studio Z-Blog" target="_blank">Z-Blog</a> 本站遵循<a
-			rel="license" target="_blank" title="署名-非商业性使用-禁止演绎 3.0 中国大陆许可协议"
-			href="http://creativecommons.org/licenses/by-nc-nd/3.0/cn/"> CC
-			BY-NC-ND 3.0 CN协议 </a>。
+		Powered By <a href="http://www.jlblog.top/"
+			title="RainbowSoft Studio Z-Blog" target="_blank">JlBlog</a>
 	</h4>
 </div>

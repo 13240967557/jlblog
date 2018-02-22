@@ -47,5 +47,9 @@
 		AND la.aid = a.id
     </select>
     
+    <select id="selectAllLaber" resultMap="laber">
+    	SELECT * FROM laber
+    </select>
+    
     
 </mapper>

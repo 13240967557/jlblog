@@ -51,7 +51,7 @@ public class LaberController {
 		return data;
 	}
 	
-	/**000 
+	/**
 	 * 贾智源
 	 * 2018年1月24日09:36:41
 	 * 模糊查询 回显数据
@@ -66,6 +66,19 @@ public class LaberController {
 		List<ArticleVo> avlist = laberService.selectLikeArticle(av);
 		model.addAttribute("avlist", avlist);
 		return "ftl/searchblog";
+	}
+	
+	/**
+	 * 贾智源
+	 * 2018-2-2 09:18:25
+	 * 返回文章标签
+	 * 
+	 */
+	@RequestMapping("/laber/labers")
+	@ResponseBody
+	public List<Laber> labers(){
+		List<Laber> laberlist = laberService.selectAllLaber();
+		return laberlist;
 	}
 	
 }

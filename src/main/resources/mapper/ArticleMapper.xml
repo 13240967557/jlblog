@@ -46,6 +46,7 @@
     <select id="getIndexArticle" resultType="com.jlblog.jlblog.pojo.ArticleVo">
     	SELECT * FROM article a
 		WHERE a.id = (SELECT id FROM article b WHERE a.classify=b.classify ORDER BY createtime DESC LIMIT 1)
+		ORDER BY a.id DESC
     </select>
     
     <!-- 修改文章的浏览量 -->
@@ -54,5 +55,16 @@
 		SET browsenumber = (browsenumber+1)
 		WHERE id = #{id}
     </update>
+    
+    <insert id="insertArticledetails" parameterType="com.jlblog.jlblog.pojo.ArticleVo">
+    	INSERT INTO articledetails
+		VALUES(#{id},#{articleDetails})
+    </insert>
+    
+    <insert id="insertarticle" parameterType="com.jlblog.jlblog.pojo.ArticleVo">
+    	INSERT INTO 
+		article(id,title,intro,createtime,browsenumber,articleimg,classify)
+		VALUES(#{id},#{title},#{intro},#{createtime},#{browsenumber},#{articleimg},#{classify})
+    </insert>
     
 </mapper>

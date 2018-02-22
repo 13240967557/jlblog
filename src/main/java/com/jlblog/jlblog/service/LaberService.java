@@ -13,4 +13,6 @@ public interface LaberService {
 	
 	List<ArticleVo> selectLikeArticle(ArticleVo av);
 	
+	List<Laber> selectAllLaber();
+	
 }

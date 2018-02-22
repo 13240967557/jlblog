@@ -21,4 +21,6 @@ public interface LaberMapper {
 	
 	List<ArticleVo> selectLikeArticle(ArticleVo av);
 	
+	List<Laber> selectAllLaber();
+	
 }

@@ -15,6 +15,7 @@ import com.jlblog.jlblog.service.ArticlepvService;
 
 
 
+
 /**
  * 
  * @author 贾智源
@@ -37,6 +38,11 @@ public class IndexController {
 		return "ftl/"+str;
 	}
 	
+	@RequestMapping("/admin/{str}")
+	public String adminIndex(@PathVariable String str){
+		return "admin/"+str;
+	}
+	
 	@RequestMapping("/getip")
 	@ResponseBody
 	public String getRemoteHost(HttpServletRequest request,String id){
@@ -44,7 +50,5 @@ public class IndexController {
 		articlepvService.insertArticlePV(id,ip);
 		return ip; 
 	}
-	
-	
 	
 }

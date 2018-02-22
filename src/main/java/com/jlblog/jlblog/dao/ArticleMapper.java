@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
+import com.jlblog.jlblog.pojo.Article;
 import com.jlblog.jlblog.pojo.ArticleVo;
 import com.jlblog.jlblog.pojo.Laber;
 
@@ -26,5 +27,9 @@ public interface ArticleMapper {
 	List<ArticleVo> getIndexArticle();
 	
 	void updateArticleBrowsenumber(String id);
+	
+	void insertArticledetails(ArticleVo articleVo);
+	
+	void insertarticle(ArticleVo articleVo);
 	
 }
